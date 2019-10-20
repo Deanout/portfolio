@@ -1,6 +1,8 @@
-<div class="jumbotron">
-	<h1>Pages#home</h1>
-	<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-wrapper">
+	<div class="float-left home-link-container">
+		<h1 class="home-portfolio-link"><%= link_to 'portfolio', '#', class:'home-link' %></h1>
+		<h1 class="home-resume-link"><%= link_to 'resume', '#', class:'home-link' %></h1>
+		<h1 class="home-blog-link"><%= link_to 'blog', blog_path, class:'home-link' %></h1>
 
-	<%= link_to 'Blog', blog_path %>
+	</div>
 </div>

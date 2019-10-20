@@ -2,12 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.blog-wrapper {
+	background-image: linear-gradient(#eee, #fff);
 
-.blog-container {
-	margin-top: 4em;
-	padding-top: 2em;
-}
 
-.blog-body {
-	padding: 1em;
+	.blog-container {
+		margin-top: 4em;
+		padding-top: 2em;
+		margin-bottom: 4em;
+		padding-bottom: 2em;
+		background-color: #fff;
+
+		.blog-title {
+			text-decoration: none;
+			font-weight: 550;
+			font-variant: small-caps;
+			color: #111111;
+		}
+		.blog-title:hover {
+			font-size: 2.6rem;
+		}
+	}
+
+	.blog-body {
+		padding: 1em;
+	}
 }

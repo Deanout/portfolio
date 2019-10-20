@@ -1,3 +1,44 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body, html {
+  height: 100%;
+	min-height: 100%;
+  background-image: linear-gradient(#eee, #fff);
+}
+
+.home-wrapper {
+  background-image:    url(backgroundless.png);
+  /* Full height */
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;  
+}
+
+.home-link-container {
+	.home-link {
+		text-decoration: none;
+		font-weight: 550;
+		font-variant: small-caps;
+		font-style: italic;
+		color: #111111;
+	}
+	.home-link:hover {
+		font-size: 3rem;
+	}
+	.home-portfolio-link {
+		margin-left: 2rem;
+	}
+	.home-resume-link {
+		margin-left: 1.5rem;
+	}
+	.home-blog-link {
+		margin-left: 1rem;
+	}
+}
