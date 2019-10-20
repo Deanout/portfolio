@@ -2,4 +2,16 @@
 	<div class="navbar-brand">
 		<h3><%= link_to 'Dean', root_path, class:'navbar-brand-link' %></h3>
 	</div>
+		<div class="navbar-links-container">
+			<ul class="navbar-links">
+				<li class="navbar-link-item"><%= link_to "Portfolio", '#', class:'navbar-link' %>
+				</li>
+				<li class="navbar-link-item"><%= link_to "Resume", '#', class:'navbar-link' %>
+				</li>
+				<li class="navbar-link-item <%= request.fullpath == blog_path ? 'navbar-link-active' : '' %>"> 
+					<%= link_to "Blog", blog_path, class:'navbar-link' %>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>

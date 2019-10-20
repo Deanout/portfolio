@@ -4,7 +4,22 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params[:search]
+      @posts = Post.search(params[:search])
+      puts "#"
+      puts "#"
+      puts "#"
+      puts "#"
+      puts @posts.count
+    else
+      @posts = Post.all
+    end
+    @posts = @posts.uniq.sort_by(&:created_at).reverse
+
+    respond_to do |format|
+      format.js { render partial: "index" }
+      format.html {}
+    end
   end
 
   # GET /posts/1
@@ -69,6 +84,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :summary, :search)
     end
 end

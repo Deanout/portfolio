@@ -4,7 +4,7 @@
 
 .blog-wrapper {
 	background-image: linear-gradient(#eee, #fff);
-	padding-top:6em;
+	padding-top:8em;
 	padding-bottom:2em;
 
 	.blog-container {
@@ -21,9 +21,23 @@
 		.blog-title:hover {
 			font-size: .9em;
 		}
+		.blog-subtitle {
+			color: #666;
+		}
+		.blog-subtitle-bar {
+			width: 25%;
+			margin-right:75%;
+		}
 	}
-
 	.blog-body {
 		padding: 0em 1em 1em 1em;
 	}
+	.blog-button {
+		padding-top: 4px;
+	}
+}
+
+.search-container {
+	margin-top: 4em;
+	display:inline-block;
 }

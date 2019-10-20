@@ -1,9 +1,33 @@
-<div class="blog-wrapper">
-  <% @posts.each do |post| %>
-  <div class="container shadow blog-container">
-    <h1 class="text-center"><%= link_to post.title, post, class:'blog-title' %></h1>
-    <h6 class="text-center">Posted by @author <%= post.created_at.strftime("at %I:%M %p on %b %e, %Y") %>
-    </h6>
+<div class="container">
+  <div class="search-container float-right">
+    <%= form_tag(blog_path, method: :get, remote: true, id: 'search_form') do %>
+      <div class="input-group mb-3">
+        <%= text_field_tag :search, params[:search], class:'form-control', onKeyUp: 'submitFromAjax()' %>
+        <div class="input-group-append">
+          <%= submit_tag 'Search', class:'btn btn-outline-secondary' %>
+        </div>
+      </div>
+    <% end %>
   </div>
+</div>
+
+<div class="blog-wrapper" id="blog-wrapper">
+  <% @posts.each do |post| %>
+    <%= render post %>
   <% end %>
 </div>
+
+<script>
+function submitFromAjax(){
+   var request =  $.ajax({
+                   type: "get",
+                   url : "/blog",
+                   dataType: "script",
+                   data : {search: $("#search_form #search").val()}
+                  });
+                   request.done(function(data) {
+                   });
+                   request.fail(function(jqXHR, textStatus) {
+                   });
+}
+</script>

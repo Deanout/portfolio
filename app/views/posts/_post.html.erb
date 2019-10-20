@@ -1,0 +1,14 @@
+<div class="container shadow blog-container" id="post_<%= post.id %>">
+  <h2 class=""><%= link_to post.title, post, class:'blog-title' %></h1>
+  <h6 class="blog-subtitle"><%= post.created_at.strftime("%b %e, %Y")%>
+  </h6>
+  <hr class="blog-subtitle-bar float-left">
+  <br>
+  <div class="blog-summary">
+    <%= post.summary %>
+  </div>
+  <div class="float-right">
+    <%= link_to "Read More", post, class:'btn btn-light blog-button' %>
+  </div>
+  <hr>
+</div>

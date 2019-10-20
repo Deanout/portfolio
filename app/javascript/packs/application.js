@@ -11,6 +11,7 @@ require("popper.js")
 require("@rails/activestorage").start()
 require("channels")
 
+
 import "app/trix.js";
 import "app/navbar.js";
 
@@ -20,4 +21,3 @@ import "app/navbar.js";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-
