@@ -10,6 +10,7 @@ The goal is to use this project to test the waters of Ruby on Rails 6. Through t
 
 ## Setup
 If you're interested in setting up the project yourself, right now the only things you have to do is download the project and run the migrations from within the directory. (Make sure you are actually in the folder when you run this in the terminal or console)
+
 `rails db:migrate`
 
 ## Additional Learning Resources

@@ -1,9 +1,10 @@
-<div class="container" style="padding-top:2em;">
-<h1 class="text-center"><%= @post.title %></h1>
-<h4>Posted by @author <%= @post.created_at.strftime("at %I:%M %p on %b %e, %Y") %>
-<hr>
+<div class="container shadow blog-container">
+	<h1 class="text-center"><%= link_to @post.title, blog_path %></h1>
+	<h6 class="text-center">Posted by @author <%= @post.created_at.strftime("at %I:%M %p on %b %e, %Y") %>
+	</h6>
+	<hr>
 
-
-
-
+	<div class="text-justify blog-body">
+		<%= @post.body %>
+	</div>
 </div>
