@@ -1,0 +1,25 @@
+.navbar {
+	background-color: #fff;
+	height: 3em;
+	opacity: 1;
+
+	.navbar-brand {
+		text-decoration: none;
+		font-weight: 550;
+		font-variant: small-caps;
+		margin-top:-0.25em;
+
+		.navbar-brand-link {
+			text-decoration: none;
+			color: #111111;
+		}
+		.navbar-brand-link:hover {
+			font-size:.9em;
+		}
+	}
+}
+
+.navbar-fade {
+	opacity: 1;
+	background-color: #000;
+}

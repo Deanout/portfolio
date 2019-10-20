@@ -1,27 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+<div class="blog-wrapper">
+  <% @posts.each do |post| %>
+  <div class="container shadow blog-container">
+    <h1 class="text-center"><%= link_to post.title, post, class:'blog-title' %></h1>
+    <h6 class="text-center">Posted by @author <%= post.created_at.strftime("at %I:%M %p on %b %e, %Y") %>
+    </h6>
+  </div>
+  <% end %>
+</div>

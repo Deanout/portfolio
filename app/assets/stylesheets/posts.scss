@@ -4,12 +4,11 @@
 
 .blog-wrapper {
 	background-image: linear-gradient(#eee, #fff);
-
+	padding-top:6em;
+	padding-bottom:2em;
 
 	.blog-container {
-		margin-top: 4em;
 		padding-top: 2em;
-		margin-bottom: 4em;
 		padding-bottom: 2em;
 		background-color: #fff;
 
@@ -20,11 +19,11 @@
 			color: #111111;
 		}
 		.blog-title:hover {
-			font-size: 2.6rem;
+			font-size: .9em;
 		}
 	}
 
 	.blog-body {
-		padding: 1em;
+		padding: 0em 1em 1em 1em;
 	}
 }

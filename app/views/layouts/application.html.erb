@@ -10,6 +10,7 @@
   </head>
 
   <body>
-      <%= yield %>
+    <%= render 'layouts/navbar' unless @disable_nav %>
+    <%= yield %>
   </body>
 </html>
