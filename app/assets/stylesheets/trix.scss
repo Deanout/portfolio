@@ -1,3 +1,11 @@
+/*
+  Copied from node_modules/trix/dist/trix.css to here.
+  This file is then imported via the application.scss's
+  @import '/*';
+  line, which causes Trix to continue function after
+  removal of old css require tree statements.
+*/
+
 @charset "UTF-8";
 /*
 Trix 1.2.1
